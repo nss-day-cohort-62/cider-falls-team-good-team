@@ -6,7 +6,7 @@ const parkAreas = getParkAreas()
 export const Guests = () => {
     let html = `<ul>`
     for (const guest of guests) {
-        html += `li id="guest--${guest.id}">${guest.firstName} ${guest.lastName}`
+        html += `<li id="guest--${guest.id}">${guest.firstName} ${guest.lastName}</li>`
     }
     html += `</ul>`
     return html
