@@ -15,7 +15,7 @@ export const Guests = () => {
 const filteredParkAreaByGuest = (selectedGuest) => {
     let filteredParkArea = null
     for (const parkArea of parkAreas) {
-        if (selectedGuest.parkAreaid === parkArea.id)
+        if (selectedGuest.parkAreaId === parkArea.id)
         filteredParkArea = parkArea
     }
     return filteredParkArea
