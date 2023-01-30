@@ -1,4 +1,4 @@
-import { getParkAreas, getGuests } from "./database";
+import { getParkAreas, getGuests } from "./database.js";
 
 const parkAreas = getParkAreas();
 const guests = getGuests();
@@ -14,7 +14,7 @@ document.addEventListener("click", (clickEvent) => {
         //if PK matches integer from HTML
       if (area.id === parseInt(parkAreaId)) {
         //create constant to hold value created by invoking function to count guests
-        const guestsPresent = guestsInArea(parkAreas);
+        const guestsPresent = guestsInArea(area);
         window.alert(
             //string that tells how many guests are in any given area.
           `${area.name} currently welcomes ${guestsPresent} guests.`
@@ -24,16 +24,18 @@ document.addEventListener("click", (clickEvent) => {
   }
 });
 
+
 //create function to iterate through park areas and return string
-export const ParkAreas = (parkAreas) => {
+export const ParkAreas = () => {
   //set empty HTML string
   let parkAreaHTML = "";
   // iterate through parkAreas variable
   for (const area of parkAreas) {
-    parkAreaHTML += `<h2 class="headline--areas" id="parkArea--${parkAreas.id}">${parkAreas.name}</h2>`;
+    parkAreaHTML += `<h2 class="headline--areas" id="parkArea--${area.id}">${area.name}</h2>`;
   }
   return parkAreaHTML;
 };
+
 
 //create function to match parkArea.id and fk on guests and return the count of all guests in an area.
 const guestsInArea = (parkArea) => {
