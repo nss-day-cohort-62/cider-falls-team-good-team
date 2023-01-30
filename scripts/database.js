@@ -22,31 +22,49 @@ const database = {
         {id: 6, name: "Pine Bluff Trails", location: "Southeast"}, 
     ],
     services: [
-        {id: 1, name: "Retaurant", parkAreaId: 1},
-        {id: 2, name: "Hotel", parkAreaId: 1},
-        {id: 3, name: "Lodging", parkAreaId: 1},
-        {id: 4, name: "Parking", parkAreaId: 1},
-        {id: 5, name: "Parking", parkAreaId: 5},
-        {id: 6, name: "Info", parkAreaId: 1},
-        {id: 7, name: "Info", parkAreaId: 5},
-        {id: 8, name: "Picnic Grounds", parkAreaId: 1},
-        {id: 9, name: "Picnic Grounds", parkAreaId: 2},
-        {id: 10, name: "Picnic Grounds", parkAreaId: 5},
-        {id: 11, name: "Hiking", parkAreaId: 2},
-        {id: 12, name: "Hiking", parkAreaId: 4},
-        {id: 13, name: "Hiking", parkAreaId: 6},
-        {id: 14, name: "Rock Climbing", parkAreaId: 2},
-        {id: 15, name: "Fishing", parkAreaId: 3},
-        {id: 16, name: "Fishing", parkAreaId: 4},
-        {id: 17, name: "Rafting", parkAreaId: 3},
-        {id: 18, name: "Canoeing", parkAreaId: 3},
-        {id: 19, name: "Office Park", parkAreaId: 5},
-        {id: 20, name: "Playgrounds", parkAreaId: 5},
-        {id: 21, name: "Food Vendors", parkAreaId: 5},
-        {id: 22, name: "Zip Lines", parkAreaId: 6},
-        {id: 23, name: "Lodging", parkAreaId: 5},
+        {id: 1, name: "Retaurant"},
+        {id: 2, name: "Hotel"},
+        {id: 3, name: "Lodging"},
+        {id: 4, name: "Parking"},
+        {id: 5, name: "Info"},
+        {id: 6, name: "Picnic Grounds"},
+        {id: 7, name: "Hiking"},
+        {id: 8, name: "Rock Climbing"},
+        {id: 9, name: "Fishing"},
+        {id: 10, name: "Rafting"},
+        {id: 11, name: "Canoeing"},
+        {id: 12, name: "Office Park"},
+        {id: 13, name: "Playgrounds"},
+        {id: 14, name: "Food Vendors"},
+        {id: 15, name: "Zip Lines"},
+        
 
     ],
+    servicedParks: [
+        {id: 1, serviceId: 1, parkAreaId: 1},
+        {id: 2, serviceId: 2, parkAreaId: 1},
+        {id: 3, serviceId: 3, parkAreaId: 1},
+        {id: 4, serviceId: 4, parkAreaId: 1},
+        {id: 5, serviceId: 4, parkAreaId: 5},
+        {id: 6, serviceId: 5, parkAreaId: 1},
+        {id: 7, serviceId: 5, parkAreaId: 5},
+        {id: 8, serviceId: 6, parkAreaId: 1},
+        {id: 9, serviceId: 6, parkAreaId: 2},
+        {id: 10, serviceId: 6, parkAreaId: 5},
+        {id: 11, serviceId: 7, parkAreaId: 2},
+        {id: 12, serviceId: 7, parkAreaId: 4},
+        {id: 13, serviceId: 7, parkAreaId: 6},
+        {id: 14, serviceId: 8, parkAreaId: 2},
+        {id: 15, serviceId: 9, parkAreaId: 3},
+        {id: 16, serviceId: 9, parkAreaId: 4},
+        {id: 17, serviceId: 10, parkAreaId: 3},
+        {id: 18, serviceId: 11, parkAreaId: 3},
+        {id: 19, serviceId: 12, parkAreaId: 5},
+        {id: 20, serviceId: 13, parkAreaId: 5},
+        {id: 21, serviceId: 14, parkAreaId: 5},
+        {id: 22, serviceId: 15, parkAreaId: 6},
+        {id: 23, serviceId: 3, parkAreaId: 5}
+    ]
 }
 
     export const getGuests = () => {
@@ -59,4 +77,8 @@ const database = {
 
     export const getServices = () => {
         return database.services.map(service => ({...service}))
+    }
+
+    export const getServicedParks = () => {
+        return database.servicedParks.map(servicedPark => ({...servicedPark}))
     }
