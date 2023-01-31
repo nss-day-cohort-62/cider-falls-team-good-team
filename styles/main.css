@@ -1,23 +1,28 @@
 @import "details.css";
-@import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
+@import url("https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap");
+@import url("./Cider-Falls-Logo.png")
 
-/*Typography
+/*Typography /*
 --------------------------------------------------------------*/
 body,
 button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: "Comfortaa", Arial, sans-serif;
+	color: #f3fadc;
+	font-family: 'Tillana', cursive;
 	font-size: 14px;
 	line-height: 1.5;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: "Patua One", serif;
+	color: #f3fadc;
+  font-family: 'Tillana', cursive;
   letter-spacing: 2px;
 }
 
 
-
+body {
+	background-image: url("https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+	background-size: cover;
+}
