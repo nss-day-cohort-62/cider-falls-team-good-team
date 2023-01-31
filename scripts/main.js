@@ -8,14 +8,17 @@ const mainContainer = document.querySelector("#container")
 
 const applicationHTML = `
 
+
 <article class="services">
     <h2>Park Services</h2>
-    ${Services()}
+    <div class="serviceList">${Services()}</div>
 </article>
 
+<section class="area-guest-container">
 <article class="parkAreas">
-    <section class="detail--column list details__parkAreas">
-        ${ParkAreas()}
+    <h2>Park Areas</h2>
+    <section class="detail--column">
+    ${ParkAreas()}
     </section>
 </article>
 
@@ -23,6 +26,7 @@ const applicationHTML = `
     <h2>Current Guest List</h2>
     ${Guests()}
 </article>
+</section>
 `
 
 mainContainer.innerHTML = applicationHTML

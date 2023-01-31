@@ -1,0 +1,86 @@
+.header {
+   text-align: center;
+}
+
+h1 {
+   margin-top: -20px; 
+   font-size: 4em; 
+}
+
+.logo {
+   max-width: 300px;
+   height:auto;
+   text-align: center;
+   margin: -70px; 
+}
+
+.logo img {
+   display: inline-block;
+}
+
+
+h2 {
+   text-indent: 15px;
+}
+
+li {
+   color: #f3fadc;
+   font-family: 'Tillana', cursive;
+}
+
+.serviceList {
+   columns: 3;
+   vertical-align: text-top;
+   background-color: rgba(50, 50, 50, .8);
+   margin-bottom: 20px; 
+   padding: 15px; 
+}
+
+.area-guest-container {
+    display:flex;
+    flex-direction: row wrap;
+    justify-content: space-between;
+    margin: 0px 25px;
+}
+
+.parkAreas {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   flex-basis: 66%;
+   
+}
+
+
+.guestList {
+  text-align: right;
+  background-color: rgba(50, 50, 50, .8);
+  padding: 0px 25px;
+   margin-top: 75px;
+     
+}
+
+.detail--column {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+h3{
+   text-align:center;
+}
+
+.group_park {
+   background-color: rgba(50, 50, 50, .8);
+   padding: 10px 15px;
+   margin: 10px;
+   width: 250px;
+   height: 250px;
+   
+}
+
+.footer {
+   text-align: center;
+  color: #f3fadc;
+	font-family: 'Tillana', cursive;
+}

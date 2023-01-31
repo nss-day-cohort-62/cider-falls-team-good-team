@@ -41,7 +41,7 @@ const matchedServices = (filteredServices, servicesArray) => {
   for (const filteredService of filteredServices) {
     for (const service of servicesArray) {
       if (service.id === filteredService.serviceId) {
-        matchedServiceHTML += `<li class="service list" id="service--${service.id}">${service.name}</li>`
+        matchedServiceHTML += `<li class="service--list" id="service--${service.id}">${service.name}</li>`
       }
     }
   }
@@ -55,10 +55,10 @@ export const ParkAreas = () => {
   let parkAreaHTML = "";
   // iterate through parkAreas variable
   for (const area of parkAreas) {
-    parkAreaHTML += `<h2 class="headline--areas" id="parkArea--${area.id}">${area.name}</h2>`;
+    parkAreaHTML += `<section class="group_park"><h3 class="headline--areas" id="parkArea--${area.id}">${area.name}</h3>`;
     const filteredService = filteredServiceId(area, servicedParks)
     const matchedService = matchedServices(filteredService, services)
-    parkAreaHTML += matchedService
+    parkAreaHTML += `${matchedService} </section>`
   }
   return parkAreaHTML;
 };
