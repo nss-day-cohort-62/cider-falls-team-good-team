@@ -21,19 +21,21 @@ h1 {
 
 h2 {
    text-indent: 15px;
+   column-span: all;
 }
 
 li {
-   color: #f3fadc;
-   font-family: 'Tillana', cursive;
+   list-style-type: none;
 }
 
 .serviceList {
-   columns: 3;
-   vertical-align: text-top;
    background-color: rgba(50, 50, 50, .8);
    margin-bottom: 20px; 
-   padding: 15px; 
+   padding: 15px;
+   column-count: 3;
+   column-fill: balance;
+   column-gap: 0px;
+   text-align: center;
 }
 
 .area-guest-container {
@@ -48,16 +50,13 @@ li {
    flex-direction: row;
    flex-wrap: wrap;
    flex-basis: 66%;
-   
 }
-
 
 .guestList {
   text-align: right;
   background-color: rgba(50, 50, 50, .8);
   padding: 0px 25px;
    margin-top: 75px;
-     
 }
 
 .detail--column {
@@ -81,6 +80,4 @@ h3{
 
 .footer {
    text-align: center;
-  color: #f3fadc;
-	font-family: 'Tillana', cursive;
 }
